@@ -1,0 +1,15 @@
+curl -o jsoup.jar https://jsoup.org/packages/jsoup-1.17.2.jar       //download jsoup    
+crontab -e      //edit crontab
+crontab -l      //show crontab
+*/2 * * * * cd ~/hw3 && java -cp ".:./jsoup.jar" HtmlParser your_argument       //crontab command
+*/2 * * * * cd /path/to/class/files/folder && /path/to/java -cp ".:/path/to/class/files" YourClassName
+
+
+//run jsoup
+#windows
+javac -cp ".;./jsoup.jar" HtmlParser.java
+java -cp ".;./jsoup.jar" HtmlParser
+
+#linux/mac
+javac -cp ".:./jsoup.jar" HtmlParser.java
+java -cp ".:./jsoup.jar" HtmlParser
